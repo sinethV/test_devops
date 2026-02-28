@@ -3,22 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Product Store</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <h1>Our Products</h1>
   <ul id="products"></ul>
 
-  <script>
-    fetch('/api/products')
-      .then(r => r.json())
-      .then(list => {
-        const ul = document.getElementById('products');
-        list.forEach(p => {
-          const li = document.createElement('li');
-          li.textContent = `${p.name} – $${p.price}`;
-          ul.appendChild(li);
-        });
-      });
-  </script>
+  <script src="/js/app.js"></script>
 </body>
 </html>
